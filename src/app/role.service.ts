@@ -6,20 +6,19 @@ import { MovieService } from './movie.service';
 @Injectable({
   providedIn: 'root'
 })
-export class AuthService {
-
+export class RoleService {
+rolecheck:any
   constructor(private auth : MovieService, private router:Router) { }
-
   canActivate(): boolean  {
-    if(this.auth.loggedin()){
+    this.rolecheck= localStorage.getItem("role")
+    if(this.rolecheck == "admin"){
       
       return true;
   }
   else{
-   this.router.navigate([""]);
+  this.router.navigate([""]);
     return false;
+    
   }
   }
-
-  
 }

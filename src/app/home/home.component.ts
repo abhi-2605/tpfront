@@ -52,4 +52,19 @@ localStorage.setItem('revid', id.toString())
 this.router.navigate(['review'])
 }
 
+del(id:any){
+  this.dataservice.del(id. title)
+  .subscribe((data) => {
+    this.moviedatas = this.moviedatas.filter(p => p !== id);
+  })
+}
+update(id:any){
+  let ab = id.title
+  localStorage.setItem('updateid', ab.toString())
+  this.router.navigate(['update']);
+}
+logout(){
+  localStorage.clear()
+  this.router.navigate([""]);
+}
 }

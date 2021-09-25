@@ -5,8 +5,11 @@ import { LandingpageComponent } from './landingpage/landingpage.component';
 import { AuthService } from './auth.service';
 import { AddmoviesComponent } from './addmovies/addmovies.component';
 import { ReviewComponent } from './review/review.component';
+import { RoleService } from './role.service';
+import { UserComponent } from './user/user.component';
+import { UpdateComponent } from './update/update.component';
 
-const routes: Routes = [{path:"", component:LandingpageComponent } , {path:'home' , component:HomeComponent , canActivate:[AuthService ] } , {path:"addmovies" , component:AddmoviesComponent } ,{path:"review" , component:ReviewComponent}] ;
+const routes: Routes = [{path:"", component:LandingpageComponent } , {path:'home' , component:HomeComponent , canActivate:[RoleService ] } , {path:"addmovies" , component:AddmoviesComponent ,canActivate:[RoleService ] } ,{path:"review" , component:ReviewComponent , canActivate:[AuthService ] } ,{path:"user" , component:UserComponent ,canActivate:[AuthService ] } ,{path:"update", component:UpdateComponent , canActivate:[RoleService ]} ] ;
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

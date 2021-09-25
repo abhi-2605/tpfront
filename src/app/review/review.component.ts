@@ -32,8 +32,10 @@ export class ReviewComponent implements OnInit {
     msg:''
   }]
   typingmsg:any = []
+  rolecheck:any
   ngOnInit(): void {
     let id= localStorage.getItem("revid")
+    this.rolecheck= localStorage.getItem("role")
     console.log(id)
     this.comment.id = (localStorage.getItem('revid') || "{}")
     this.dataservice.review(id).subscribe((data)=>{
@@ -67,6 +69,13 @@ disp(){
   
 this.typingmsg.push(this.comment.msg)
 this.comment.msg=""
+}
+
+del(id:any){
+  this.dataservice.delcom(id._id)
+  .subscribe((data) => {
+    this.getmsgs = this.getmsgs.filter(p => p !== id);
+  })
 }
 
 }

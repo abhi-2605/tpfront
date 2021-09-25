@@ -26,6 +26,10 @@ contr:String="";
   msg={
     msg:''
   }
+  role=[{
+    role:''
+  }]
+  r:any;
   ngOnInit(): void {
   }
   emailpattern= "^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
@@ -61,8 +65,36 @@ contr:String="";
    }
    else{
   localStorage.setItem('token', data.toString())
-   this.router.navigate(["home"])
+
+
+  
+  //  this.router.navigate(["home"])
+
+
    }
+
+
   })
+  this.dataservice.logincheck(this.logindata).subscribe((data:any) =>{
+     
+    this.role = JSON.parse(JSON.stringify(data))
+    let obj = this.role.find((o, i) => {
+      return o
+    })
+this.r= obj?.role
+    if (obj?.role == 'user'){
+      console.log(obj.role)
+      this.router.navigate(["user"])
+      localStorage.setItem('role', this.r )
+    }
+    else{
+      this.router.navigate(["home"])
+      localStorage.setItem('role', this.r)
+    }
+    
+   })
   }
-}
+
+  }
+  
+

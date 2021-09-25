@@ -60,7 +60,7 @@
                         </div>
                         <div class="card-body">
                             <blockquote class="blockquote mb-0">
-                                <p *ngFor="let i of getmsgs"> USER:- {{i.msg}} </p>
+                                <p *ngFor="let i of getmsgs"> USER:- {{i.msg}} <button (click)="del(i)" *ngIf="rolecheck=='admin' " class="btn btn-primary">DELETE</button> </p>
                                 <p *ngFor="let i of typingmsg"> USER:-{{i}}</p>
 
                             </blockquote>

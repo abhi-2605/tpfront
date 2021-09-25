@@ -1,7 +1,7 @@
 <div class="container">
     <form action="#">
         <div class="row">
-            <h2 style="text-align:center ; color: white;">THOMAS REVIEW SYSTEM!</h2>
+            <h2 style="text-align:center ; color: white; font-size: xx-large; font-style: italic; font-weight: bold;">TSMB</h2>
 
 
             <div class="col">
@@ -43,14 +43,10 @@
                             <b> Phone Number Format not right</b></label>
                         </div>
                         <div class="div">
-                            <label for="email" style="color: aliceblue;"><b>Admin</b></label>
-                            <input type="checkbox" class="form-check" placeholder="Enter phone number" name="roleadmin" value="admin" [(ngModel)]="userdata.role">
-
-                        </div>
-                        <div class="div">
-
-                            <label for="email" style="color: aliceblue;"><b>User</b></label>
-                            <input type="checkbox" class="form-check" placeholder="Enter phone number" name="roleuser" value="user" [(ngModel)]="userdata.userrole">
+                            <label for="exampleInputName" class="form-label">role</label>
+                            <select name="user" class="form-control" [(ngModel)]="userdata.role" aria-label="Default select example" id="user" #required>
+                      <option selected value="user" >USER</option>
+                            </select>
                         </div>
 
                         <p style="color: aliceblue;">By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>

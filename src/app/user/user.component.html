@@ -1,6 +1,5 @@
 <h2 style="color: grey; padding: 2%; font-style: italic; font-size: 40px; font-weight: 900; text-align: center;">SOME TOP MOVIE</h2>
 <div class="addmovie">
-    <button (click)="addmovie()" style="float: right;" class="btn btn-primary">Addmovie</button>
     <button (click)="logout()" style="float: left;" class="btn btn-primary">Logout</button>
 </div>
 
@@ -17,8 +16,7 @@
                     <p class="card-text">PLOT:-{{moviedata.plot}}</p>
 
                     <button (click)="review(moviedata.title)" class="btn btn-primary">REVIEW</button>
-                    <button (click)="del(moviedata)" class="btn btn-primary">DELETE</button>
-                    <button (click)="update(moviedata)" class="btn btn-primary">UPDATE</button>
+
                 </div>
             </div>
         </mat-grid-tile>

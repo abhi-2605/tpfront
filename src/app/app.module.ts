@@ -13,13 +13,17 @@ import {MatGridListModule} from '@angular/material/grid-list';
 import { HttpClientModule } from '@angular/common/http';
 import { AddmoviesComponent } from './addmovies/addmovies.component';
 import { ReviewComponent } from './review/review.component';
+import { UserComponent } from './user/user.component';
+import { UpdateComponent } from './update/update.component';
 @NgModule({
   declarations: [
     AppComponent,
     LandingpageComponent,
     HomeComponent,
     AddmoviesComponent,
-    ReviewComponent
+    ReviewComponent,
+    UserComponent,
+    UpdateComponent
   ],
   imports: [
     BrowserModule,
