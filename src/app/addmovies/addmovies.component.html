@@ -1,0 +1,74 @@
+<div class="all">
+    <div id="masthead">
+        <div class="container">
+            <div class="row">
+                <div>
+                    <h1 style="text-align: center; font-size: 70px; font-weight: bolder; color: white">ADD MOVIE
+                        <p class="lead"></p>
+                    </h1>
+                </div>
+                <div class="col-md-5">
+                    <div class="well well-lg">
+                        <div class="row">
+                            <div class="col-sm-12">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="top-spacer table-responsive">
+
+                    <!--Form-->
+                    <form method="POST" class="col-lg-8 upform" (ngSubmit)="addmov()" style="text-align: center;">
+                        <div class="mb-3">
+                            <label for="exampleInputName" class="form-label">Name</label>
+                            <input type="text" name="name" [(ngModel)]="addmovie.name" class="form-control" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputName" class="form-label">Director</label>
+                            <input type="text" name="director" [(ngModel)]="addmovie.director" class="form-control" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputName" class="form-label">Genre</label>
+                            <select name="genre" class="form-control" [(ngModel)]="addmovie.genre" aria-label="Default select example" id="bookgenre">
+                      <option selected value="Novel" >Novel</option>
+                      <option value="Fiction">Fiction</option>
+                      <option value="Autobiography">Comedy</option>
+                      <option value="Non-fiction">Non-fiction</option>
+                      <option value="Short stories">Action</option>
+                      <option value="Atlases">Drama</option>
+                      <option value="Poetry">Sci-fi</option>
+                      <option value="Article">Action -Comedy</option>
+                      <option value="Dictionary">romantic</option>
+                      <option value="Biography">romantic Comedy</option>
+                      <option value="others">others</option>
+                      
+                  </select>
+
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputName" class="form-label">Year</label>
+                            <input type="text" name="plot" [(ngModel)]="addmovie.year" class="form-control" id="bookimg" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputName" class="form-label">PLOT</label>
+                            <textarea name="plot" class="form-control is-invalid" [(ngModel)]="addmovie.plot" id="bookabout" placeholder="plot" required></textarea>
+                        </div>
+                        <br>
+
+                        <button type="submit" class="btn btn-primary" style="text-align: center;" id="up-btn">Add Movie</button>
+
+                    </form>
+                    <!--/Form-->
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

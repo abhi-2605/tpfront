@@ -1,0 +1,86 @@
+<div class="div">
+    <h1 style="color: aliceblue; font-size: 70px; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; font-weight: bolder; font-style: italic; text-align: center;">{{datas.title}}</h1>
+    <div class="wrapper">
+        <div class="main_card">
+            <div class="card_left">
+                <div class="card_datails">
+                    <h1>{{datas.title}}</h1>
+                    <div class="card_cat">
+                        <p class="PG">PG - 13</p>
+                        <p class="year">{{datas.year}}</p>
+                        <p class="genre">{{datas.genres}} </p>
+                        <p class="time">{{datas.runtime}}</p>
+                    </div>
+                    <p class="disc">{{datas.plot}}.</p>
+                    <a href="https://www.imdb.com/{{datas.title}}" target="_blank">Read More</a>
+                    <div class="social-btn">
+                        <!-- WATCH TRAILER-->
+                        <button>
+            <i class="fas fa-play"></i> SEE TRAILER
+          </button>
+                        <!-- GET-->
+                        <button>
+           
+          </button>
+                        <!--USERS RATINGS-->
+                        <button>
+            <i class="fas fa-thumbs-up"></i> 97%
+          </button>
+                        <!--BOOKMARK-->
+                        <button>
+            <i class="fas fa-star"></i>
+          </button>
+                    </div>
+                </div>
+            </div>
+            <div class="card_right">
+                <div class="img_container">
+                    <img [src]="datas.posterUrl" alt="">
+                </div>
+                <div class="play_btn">
+                    <a href="https://www.imdb.com/title/tt4912910/" target="_blank">
+                        <i class="fas fa-play-circle"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section id="app">
+        <div class="container">
+            <div class="row">
+                <div class="col-6">
+                    <!-- <div class="comment">
+                    <p *ngFor="let i of getmsgs"> {{i.msg}} </p>
+                    <p *ngFor="let i of typingmsg">{{i}}</p>
+                </div> -->
+                    <div class="card" style="color: aliceblue; background-color: black ; width: fit-content">
+                        <div class="card-header" style="text-align: center; font-family: 'Times New Roman', Times, serif; font-weight: bolder; font-size: x-large;">
+                            REVIEW
+                        </div>
+                        <div class="card-body">
+                            <blockquote class="blockquote mb-0">
+                                <p *ngFor="let i of getmsgs"> USER:- {{i.msg}} </p>
+                                <p *ngFor="let i of typingmsg"> USER:-{{i}}</p>
+
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row">
+                <div class="col-6">
+                    <textarea type="text" class="input" placeholder="Write a comment" [(ngModel)]="comment.msg"></textarea>
+                    <button class='primaryContained float-right' type="submit" (click)="send()">Add Comment</button>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+</div>

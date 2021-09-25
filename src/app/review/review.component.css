@@ -1,0 +1,235 @@
+.div {
+    background-color: black;
+    padding: 5%;
+}
+
+.main_card {
+    color: #fff;
+    width: 760px;
+    height: 390px;
+    margin: 50px auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    max-width: 770px;
+    background: #00C9FF;
+    background: -webkit-linear-gradient(to right, #92FE9D, #00C9FF);
+    background: -webkit-gradient(linear, left top, right top, from(#92FE9D), to(#00C9FF));
+    background: -webkit-linear-gradient(left, #92FE9D, #00C9FF);
+    background: -o-linear-gradient(left, #92FE9D, #00C9FF);
+    background: linear-gradient(to right, #92FE9D, #00C9FF);
+    -webkit-box-shadow: 0 0 40px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.3);
+}
+
+.card_left {
+    width: 90%;
+}
+
+.card_datails {
+    width: 90%;
+    padding: 30px;
+    margin-top: -25px;
+}
+
+.card_datails h1 {
+    font-size: 30px;
+}
+
+.card_right img {
+    height: 390px;
+    border-radius: 2px;
+}
+
+.card_right {
+    border-radius: 2px;
+}
+
+.card_cat {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.PG,
+.year,
+.genre,
+.time {
+    color: fff;
+    padding: 10px;
+    font-weight: bold;
+    border-radius: 15px;
+}
+
+.PG {
+    background: #92FE9D;
+    -webkit-box-shadow: 0 0 50px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.1);
+    -webkit-transition: 300ms ease-in-out;
+}
+
+.disc {
+    font-weight: 100;
+    line-height: 27px;
+}
+
+a {
+    color: darkcyan;
+    display: block;
+    text-decoration: none;
+}
+
+.social-btn {
+    margin-left: -10px;
+}
+
+button {
+    color: #fff;
+    border: none;
+    padding: 20px;
+    outline: none;
+    font-size: 12px;
+    margin-top: 30px;
+    margin-left: 10px;
+    background: #92FE9D;
+    border-radius: 12px;
+    -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    -webkit-transition: 300ms ease-in-out;
+    -o-transition: 200ms ease-in-out;
+    transition: 200ms ease-in-out;
+}
+
+button:hover {
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+.play_btn {
+    height: 100%;
+    margin: -394px auto;
+    position: relative;
+    text-align: center;
+    background: rgba(0, 244, 170, 0.4);
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.2);
+}
+
+.fa-play-circle {
+    color: #255;
+    font-size: 160px;
+    margin-top: 110px;
+    -webkit-animation: bounce 1.0s -0.4s infinite;
+    animation: bounce 1.0s -0.4s infinite;
+}
+
+.fa-play-circle:hover {
+    color: aqua;
+    animation: bounce 0.4s infinite;
+}
+
+@-webkit-keyframes bounce {
+    8% {
+        transform: scale(0.3);
+        -webkit-transform: scale(0.8);
+        opacity: 1;
+    }
+    10% {
+        transform: scale(1.8);
+        -webkit-transform: scale2;
+        opacity: 0;
+    }
+}
+
+@keyframes bounce {
+    8% {
+        transform: scale(0.3);
+        -webkit-transform: scale(0.8);
+        opacity: 1;
+    }
+    20% {
+        transform: scale(1.8);
+        -webkit-transform: scale2;
+        opacity: 0;
+    }
+}
+
+
+/*  FOLLOW*/
+
+.Follow {
+    background: url("https://pbs.twimg.com/profile_images/959092900708544512/v4Db9QRv_bigger.jpg")no-repeat center / contain;
+    width: 50px;
+    height: 50px;
+    bottom: 9px;
+    right: 20px;
+    display: block;
+    position: fixed;
+    border-radius: 50%;
+    z-index: 999;
+    animation: rotation 10s infinite linear;
+}
+
+@-webkit-keyframes rotation {
+    from {
+        -webkit-transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(359deg);
+    }
+}
+
+.container {
+    max-width: 640px;
+    margin: 30px auto;
+    background: #fff;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.comment {
+    display: block;
+    transition: all 1s;
+}
+
+.commentClicked {
+    min-height: 0px;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    padding: 5px 10px
+}
+
+.container textarea {
+    width: 100%;
+    border: none;
+    background: #E8E8E8;
+    padding: 5px 10px;
+    height: 50%;
+    border-radius: 5px 5px 0px 0px;
+    border-bottom: 2px solid #016BA8;
+    transition: all 0.5s;
+    margin-top: 15px;
+}
+
+button.primaryContained {
+    background: #016ba8;
+    color: #fff;
+    padding: 10px 10px;
+    border: none;
+    margin-top: 0px;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.25);
+    transition: 1s all;
+    font-size: 10px;
+    border-radius: 5px;
+}
+
+button.primaryContained:hover {
+    background: #9201A8;
+}
